@@ -8,6 +8,8 @@ else
 	echo "Windows? why?"
 fi
 
+echo "[*] doing some magic for you..."
+
 install
 
 echo

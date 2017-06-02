@@ -18,7 +18,5 @@ git_magics() {
 		git_install
 	fi
 
-	echo "[*] doing some magic for you..."
-
 	cp ./git/.gitconfig $HOME/.gitconfig
 }

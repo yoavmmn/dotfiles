@@ -1,0 +1,28 @@
+{
+	"always_show_minimap_viewport": true,
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/Colorsublime - Themes/Gruvbox-N.tmTheme",
+	"font_face": "Fira Code",
+	"font_size": 11,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"open_files_in_new_window": false,
+	"overlay_scroll_bars": "enabled",
+	"predawn_sidebar_arrows": false,
+	"predawn_tabs_active_underline": true,
+	"predawn_tabs_medium": true,
+	"scroll_past_end": true,
+	"tab_size": 2,
+	"theme": "predawn-DEV.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"word_wrap": true,
+	"wrap_width": 85
+}

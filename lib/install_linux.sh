@@ -1,5 +1,6 @@
 source "./lib/utils.sh"
 source "./git/main.sh"
+source "./sublime/main.sh"
 
 install() {
 	echo "[*] Installing for linux..."
@@ -10,5 +11,6 @@ install() {
 		&& echo "[*] Granted sudo access" \
 		|| not_sudo
 
-	git_magics
+  git_magics
+	sublime_magics
 }
