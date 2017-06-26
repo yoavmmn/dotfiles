@@ -6,6 +6,12 @@ My dotfiles for Linux and macOS.
 - NPM global modules
 - My .gitconfig
 
+## What's going to be here?
+- ZSH prompt
+- macOS tweaks
+- Update script
+- Magics 🎩✨
+
 ## Installation
 ```bash
 # give permissions
