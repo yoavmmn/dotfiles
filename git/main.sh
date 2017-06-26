@@ -1,5 +1,5 @@
 git_install() {
-	echo "Intalling git..."
+	echo "[*] Intalling git..."
 	DISTRO=$(get_distro)
 
 	if [ $DISTRO == "RedHat" ]; then

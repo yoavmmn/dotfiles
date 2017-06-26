@@ -7,6 +7,7 @@ not_sudo() {
 
 # credit to yardnsm
 get_sudo() {
+  echo "[?] I need sudo permissions now."
 	sudo -v &> /dev/null
 }
 
