@@ -1,8 +1,8 @@
 module_list=""
 
 install_module() {
-  echo "[*] Installing $1..."
   npm install -g $1 &> /dev/null & 
+  echo "[*] Installing $1..."
 
   [ $? -eq 0 ] \
     && echo "[*] Installed $1." \

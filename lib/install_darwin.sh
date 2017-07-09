@@ -2,6 +2,7 @@ source "./lib/utils.sh"
 source "./git/main.sh"
 source "./sublime/main.sh"
 source "./npm/main.sh"
+source "./brew/main.sh"
 
 install() {
   echo "[*] Installig for macOS..."
@@ -14,4 +15,5 @@ install() {
   git_magics
   sublime_magics
   npm_magics
+  brew_magics
 }

@@ -1,0 +1,9 @@
+node
+heroku
+docker
+httpie
+wget
+wifi-password
+python
+openssl
+git
