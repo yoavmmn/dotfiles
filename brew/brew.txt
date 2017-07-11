@@ -7,3 +7,4 @@ wifi-password
 python
 openssl
 git
+zsh

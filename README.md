@@ -3,12 +3,14 @@ My dotfiles for Linux and macOS.
 
 ## What's inside?
 - Sublime Text 3 configs(including Package Control)
-- NPM global modules
+- Global `npm` modules and `brew` packages
 - My .gitconfig
-
-## What's going to be here?
 - ZSH prompt
 - macOS tweaks
+- Apps and fonts for macOS
+
+## What's going to be here?
+- My zsh configuration
 - Update script
 - Magics 🎩✨
 

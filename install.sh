@@ -12,5 +12,9 @@ echo "[*] doing some magic for you..."
 
 install
 
+echo "[-] Don't forget to change to zsh"
+echo "[-] Just run the following command:"
+echo "\tsudo chsh -s $(which zsh) $(whoami)"
+
 echo
 echo "Done."

@@ -7,9 +7,10 @@ transmission
 vlc
 google-chrome
 private-internet-access
+android-file-transfer
 cheatsheet
 whatsapp
-slack
+spotify
 font-hack
 font-fira-code
 font-firacode-nerd-font-mono
