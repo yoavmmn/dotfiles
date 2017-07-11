@@ -8,9 +8,9 @@ My dotfiles for Linux and macOS.
 - ZSH prompt
 - macOS tweaks
 - Apps and fonts for macOS
+- My zsh configuration
 
 ## What's going to be here?
-- My zsh configuration
 - Update script
 - Magics 🎩✨
 

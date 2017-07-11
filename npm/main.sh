@@ -2,11 +2,11 @@ module_list=""
 
 install_module() {
   npm install -g $1 &> /dev/null & 
-  echo "\t[*] Installing $1..."
+  echo "   [*] Installing $1..."
 
   [ $? -eq 0 ] \
-    && echo "\t[*] Installed $1." \
-    || echo "\t[!] Couldn't install $1."
+    && echo "  [*] Installed $1." \
+    || echo "  [!] Couldn't install $1."
 }
 
 npm_install() {
@@ -18,7 +18,7 @@ npm_install() {
 
   for module in ${modules[@]}; do
     [[ $(echo $module_list | grep "$module@") ]] \
-      && echo "\t[*] $module is already installed. moving on..." \
+      && echo "   [*] $module is already installed. moving on..." \
       || install_module $module
   done
 }

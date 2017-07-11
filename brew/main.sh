@@ -3,20 +3,20 @@ cask_pkgs_list=""
 
 install_brew_pkg() {
   brew install $1 &> /dev/null &
-  echo "\t[*] Installing $1..."
+  echo "   [*] Installing $1..."
 
   [ $? -eq 0 ] \
-    && echo "\t[*] Installed $1." \
-    || echo "\t[!] Cloudn't install $1."
+    && echo "   [*] Installed $1." \
+    || echo "   [!] Cloudn't install $1."
 }
 
 install_cask_pkg() {
   brew install cask $1 &> /dev/null &
-  echo "\t[*] Installing $1..."
+  echo "   [*] Installing $1..."
 
   [ $? -eq 0 ] \
-    && echo "\t[*] Installed $1." \
-    || echo "\t[!] Cloudn't install $1."
+    && echo "   [*] Installed $1." \
+    || echo "   [!] Cloudn't install $1."
 }
 
 install_brew_pkgs() {

@@ -12,23 +12,17 @@ install_zsh() {
     || echo "[*] Couldn't install zsh."
 }
 
-zsh_magics() {
-  DISTRO=$(get_distro)
-
-  if [ $DISTRO == "RedHat" ]; then
-    install_zsh $DISTRO
-  elif [ $DISTRO == "Debian" ]; then
-    install_zsh $DISTRO
-  fi
-
-  curl -L git.io/antigen > "$HOME/antigen.zsh" &> /dev/null &
+antigen() {
+  git clone "https://github.com/zsh-users/antigen.git" "$HOME/.antigen" &> /dev/null &
 
   echo "[*] Installing antigen..."
 
   [ $? -eq 0 ] \
     && echo "[*] Installed antigen. moving on..." \
     || echo "[!] Couldn't install antigen."
+}
 
+base16() {
   if [ -d "$HOME/.config/base16-shell" ]; then
     echo "[!] base16-shell is already installed."
   else
@@ -40,4 +34,26 @@ zsh_magics() {
       && echo "[*] Installed base16-shell. moving on..." \
       || echo "[!] Couldn't install base16-shell."
   fi
+}
+
+setup_zsh() {
+  echo "[*] Setting up zsh config and theme."
+
+  cp "./zsh/.zshrc" "$HOME/.zshrc"
+  cp "./zsh/.zshtheme" "$HOME/.zshtheme"
+}
+
+zsh_magics() {
+  DISTRO=$(get_distro)
+
+  if [ $DISTRO == "RedHat" ]; then
+    install_zsh $DISTRO
+  elif [ $DISTRO == "Debian" ]; then
+    install_zsh $DISTRO
+  fi
+
+  antigen
+  base16
+
+  setup_zsh
 }
