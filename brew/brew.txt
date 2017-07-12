@@ -8,3 +8,6 @@ python
 openssl
 git
 zsh
+zsh-completions
+mitmproxy
+

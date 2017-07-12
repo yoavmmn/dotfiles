@@ -49,6 +49,7 @@ export ZSH="$HOME/.antigen" # Set the home ZSH directory
 
 export CODEDIR="$HOME/dev" # Projects directory
 
+alias s="subl $1" # shortcut for sublime text
 alias pdir="cd $CODEDIR" # Cd to projects directory
 alias nindex="node index.js" # Run index.js using nodejs
 alias zshrc="source ~/.zshrc" # Update the zshrc
@@ -57,16 +58,20 @@ alias גב="cd" # When in hebrew mode, cd still works
 alias בךקשר="clear" # When in hebrew mode, clear still works
 alias ginit="git init && git add . && git commit -m \"🚀  Initial Commit\"" # Initialize an empty repository, add all of the files and commit them
 
-
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=2000
+# zsh configuration
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
 SAVEHIST=1000
-setopt autocd extendedglob
 bindkey -v
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
 zstyle :compinstall filename '/Users/yoavmmn/.zshrc'
+
+setopt autocd extendedglob
+
+# Ignore all duplicate entries in the history
+setopt HIST_IGNORE_ALL_DUPS
+
+# Also autocomplete aliases
+setopt COMPLETE_ALIASES
 
 autoload -Uz compinit
 compinit
