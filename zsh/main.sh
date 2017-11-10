@@ -1,8 +1,8 @@
 install_zsh() {
   if [ $1 == "RedHat" ]; then
-    dnf install -y git &> /dev/null &
+    dnf install -y zsh &> /dev/null &
   elif [ $1 == "Debian" ]; then
-    apt-get install -y git &> /dev/null &
+    apt-get install -y zsh &> /dev/null &
   fi
 
   echo "[*] Installing zsh..."
@@ -46,11 +46,7 @@ setup_zsh() {
 zsh_magics() {
   DISTRO=$(get_distro)
 
-  if [ $DISTRO == "RedHat" ]; then
-    install_zsh $DISTRO
-  elif [ $DISTRO == "Debian" ]; then
-    install_zsh $DISTRO
-  fi
+  install_zsh $DISTRO
 
   antigen
   base16
