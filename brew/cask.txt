@@ -6,7 +6,7 @@ keepingyouawake
 transmission
 vlc
 google-chrome
-private-internet-access
+tunnelblick
 android-file-transfer
 cheatsheet
 whatsapp
