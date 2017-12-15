@@ -1,7 +1,7 @@
 {
 	"always_show_minimap_viewport": true,
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Colorsublime - Themes/Gruvbox-N.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Mariana (SL).tmTheme",
 	"font_face": "Fira Code",
 	"font_size": 16,
 	"highlight_line": true,
@@ -14,15 +14,14 @@
 		"draw_normal",
 		"draw_active"
 	],
-	"open_files_in_new_window": false,
+	"open_files_in_new_window": true,
 	"overlay_scroll_bars": "enabled",
 	"predawn_sidebar_arrows": false,
 	"predawn_tabs_active_underline": true,
 	"predawn_tabs_medium": true,
 	"scroll_past_end": true,
 	"tab_size": 2,
-	"theme": "predawn-DEV.sublime-theme",
+	"theme": "Adaptive.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"word_wrap": true,
-	"open_files_in_new_window": true
+	"word_wrap": true
 }

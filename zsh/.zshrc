@@ -57,6 +57,7 @@ alias cls="clear" # Just cuz it's smaller, not cuz Windows
 alias גב="cd" # When in hebrew mode, cd still works
 alias בךקשר="clear" # When in hebrew mode, clear still works
 alias ginit="git init && git add . && git commit -m \"🚀  Initial Commit\"" # Initialize an empty repository, add all of the files and commit them
+alias easypush="git pull --rebase && npm version patch && git push && npm publish"
 
 # zsh configuration
 HISTFILE=~/.zsh_history
