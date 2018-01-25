@@ -16,3 +16,4 @@ macos_magics() {
     osacompile -o "$filename.app" "$path/$filename.applescript"
   done
 }
+
