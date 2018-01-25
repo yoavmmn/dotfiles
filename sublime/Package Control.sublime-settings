@@ -24,11 +24,13 @@
 		"Predawn",
 		"Pug",
 		"RTL Mirror",
+		"Sass",
 		"SideBarEnhancements",
 		"SublimeCodeIntel",
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-contrib-tslint",
 		"TypeScript"
+		"Vue Syntax Highlight"
 	]
 }
