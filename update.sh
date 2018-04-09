@@ -4,4 +4,4 @@ echo "[*] Update script"
 
 echo "[*] Updating zsh..."
 cp "./zsh/.zshrc" "$HOME/.zshrc"
-cp "./zsh/.zshtheme" "$HOME/.zshtheme"
+cp -R "./zsh/zsh_local/" "$HOME/.zsh_local/"
