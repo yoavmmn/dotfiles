@@ -9,6 +9,7 @@ My dotfiles for Linux and macOS.
 - macOS tweaks
 - Apps and fonts for macOS
 - My zsh configuration
+- My tmux configuration
 - My AppleScripts(automagically compiling them)
 
 ## What's going to be here?

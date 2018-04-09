@@ -3,6 +3,7 @@ source "./git/main.sh"
 source "./sublime/main.sh"
 source "./npm/main.sh"
 source "./zsh/main.sh"
+source "./tmux/main.sh"
 
 install() {
   echo "[*] Installing for linux..."
@@ -13,10 +14,8 @@ install() {
     || not_sudo
 
   git_magics
-
   sublime_magics
-
   npm_magics
-
   zsh_magics
+  tmux_magics
 }
