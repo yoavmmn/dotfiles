@@ -7,11 +7,8 @@ autoload -U promptinit && promptinit
 autoload -U colors && colors
 autoload -U add-zsh-hook
 
-source ~/.zsh_local/.zshtheme
 source ~/.antigen/antigen.zsh # Load antigen
 antigen use oh-my-zsh # Add Oh My ZSH
-
-antigen bundle yardnsm/blox-zsh-theme
 
 # Some recommended plugins
 antigen bundles <<EOBUNDLES
@@ -33,9 +30,11 @@ EOBUNDLES
 # Import my changes
 for file in ~/.zsh_local/*.zsh; do
   if [[ -e $file ]]; then
-    . $file
+    source $file
   fi
 done
+
+antigen bundle yardnsm/blox-zsh-theme
 
 antigen apply
 
