@@ -24,4 +24,12 @@ tmux_magics() {
   git clone "https://github.com/tmux-plugins/tpm" "$HOME/.tmux/plugins/tpm"
 
   cp "./tmux/.tmux.conf" "$HOME/.tmux.conf"
+  cp -R "./tmux/tmux_local/" "$HOME/.tmux/"
+
+  # give permissions so right_segments.sh could be executed
+  for file in ~/.tmux/*.sh; do
+    if [[ -f $file ]]; then
+      chmod +x $file
+    fi
+  done
 }
