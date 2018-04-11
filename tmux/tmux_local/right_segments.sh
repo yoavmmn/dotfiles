@@ -20,6 +20,29 @@ tm_divider() {
   echo -ne "#[fg=colour245]|#[bg=default, fg=default]"
 }
 
+# Weather data
+if [ ! -f ~/.tmux/weather ]; then
+  curl -s http://wttr.in/Tel%20Aviv\?0TmQ > ~/.tmux/weather
+fi
+
+minutes="$(date +'%M')"
+seconds="$(date +'%S')"
+
+# update data every 20 minutes
+if [[ "$(($minutes % 20))" = "0" && "$seconds" -gt "00" && "$seconds" -lt "03" ]]; then
+  curl -s http://wttr.in/Tel%20Aviv\?0TmQ > ~/.tmux/weather
+fi
+
+weather="$(cat ~/.tmux/weather | grep -oe ".[[:digit:]] °C")"
+temprature=$(echo "$weather" | grep -o "[0-9]*")
+icon="❆"
+hot_point="15"
+
+[ "$temprature" -gt "$hot_point" ] && icon="☀"
+
+tm_segment "$weather_icon" "white" "$weather"
+tm_divider
+
 # Bettery status
 if [[ $(command -v pmset) ]]; then
   battery_percentage="$(pmset -g batt | awk '{print $3}' | grep '%')"
@@ -33,7 +56,7 @@ if [[ $(command -v pmset) ]]; then
 fi
 
 # Date and time
-tm_segment "" "colour245" "$(date +'%d %b %Y %H:%M')"
+tm_segment "" "colour245" "$(date +'%d %b %Y %H:%M:%S')"
 tm_divider
 
 # Machine name
