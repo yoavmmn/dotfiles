@@ -8,7 +8,7 @@ My dotfiles for Linux and macOS.
 - ZSH prompt
 - macOS tweaks
 - Apps and fonts for macOS
-- My `zsh` configuration
+- My `zsh` configuration(including [Blox](https://github.com/yardnsm/blox-zsh-theme) theme)
 - My `tmux` configuration
 - My AppleScripts(automagically compiling them)
 
