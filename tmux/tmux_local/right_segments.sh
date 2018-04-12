@@ -27,7 +27,7 @@ if [ ! -f ~/.tmux/weather ]; then
   # tail -r - reverse lines order
   # awk 'NR % 2 == 1' - keep only the first and third lines(city and country) the second line is region, not necessary
   # sed 'N;s/\n/, /;' - remove new-lines and concating to a string like "Tel Aviv, Israel"
-  # weather_location// /%20 - replacing space to url encoded spaces
+  # weather_location// /%20 - replacing spaces to url encoded spaces
   weather_location="$(geo -g | head -3 | tail -r | awk 'NR % 2 == 1' | sed 'N;s/\n/, /;')"
   weather_location="${weather_location// /%20}"
   curl -s "http://wttr.in/$weather_location\?0TmQ" > ~/.tmux/weather
@@ -43,7 +43,7 @@ if [[ "$(($minutes % 5))" = "0" && "$seconds" -gt "00" && "$seconds" -lt "03" ]]
   # tail -r - reverse lines order
   # awk 'NR % 2 == 1' - keep only the first and third lines(city and country) the second line is region, not necessary
   # sed 'N;s/\n/, /;' - remove new-lines and concating to a string like "Tel Aviv, Israel"
-  # weather_location// /%20 - replacing space to url encoded spaces
+  # weather_location// /%20 - replacing spaces to url encoded spaces
   weather_location="$(geo -g | head -3 | tail -r | awk 'NR % 2 == 1' | sed 'N;s/\n/, /;')"
   weather_location="${weather_location// /%20}"
   curl -s "http://wttr.in/$weather_location\?0TmQ" > ~/.tmux/weather
