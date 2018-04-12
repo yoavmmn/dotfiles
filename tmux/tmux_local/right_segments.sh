@@ -40,7 +40,7 @@ weather_icon="❆"
 weather_color="blue"
 
 if [ "$temprature" -gt "$hot_point" ]; then
-  weather_icon="#[size=20]☀"
+  weather_icon="#[bold]☀"
   weather_color="yellow"
 fi
 
