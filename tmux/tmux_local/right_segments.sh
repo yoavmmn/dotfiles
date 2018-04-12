@@ -9,7 +9,7 @@ tm_segment() {
 
   [[ -z $color ]] && color="colour245"
 
-  [[ -n $icon ]] && res+="#[ fg=${color}, noreverse] ${icon}"
+  [[ -n $icon ]] && res+="#[fg=${color}, noreverse] ${icon}"
   [[ -n $text ]] && res+="#[fg=${color} bg=default, noreverse] ${text} "
   res+="#[bg=default, fg=default]"
 
@@ -35,12 +35,16 @@ fi
 
 weather="$(cat ~/.tmux/weather | grep -oe ".[[:digit:]] °C")"
 temprature=$(echo "$weather" | grep -o "[0-9]*")
+hot_point="17"
 weather_icon="❆"
-hot_point="15"
+weather_color="blue"
 
-[ "$temprature" -gt "$hot_point" ] && weather_icon="☀"
+if [ "$temprature" -gt "$hot_point" ]; then
+  weather_icon="☀"
+  weather_color="yellow"
+fi
 
-tm_segment "$weather_icon" "white" "$weather"
+tm_segment "$weather_icon" "$weather_color" "$weather"
 tm_divider
 
 # Bettery status
