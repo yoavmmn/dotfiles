@@ -11,3 +11,4 @@ openssl
 mitmproxy
 wifi-password
 zsh-completions
+jakewmeyer/Geo/geo

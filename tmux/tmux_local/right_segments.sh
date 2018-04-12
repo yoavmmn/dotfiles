@@ -22,7 +22,9 @@ tm_divider() {
 
 # Weather data
 if [ ! -f ~/.tmux/weather ]; then
-  curl -s http://wttr.in/Tel%20Aviv\?0TmQ > ~/.tmux/weather
+  weather_location="$(geo -g | head -3 | tail -r | awk 'NR % 2 == 1' | sed 'N;s/\n/, /;')"
+  weather_location="${weather_location// /%20}"
+  curl -s "http://wttr.in/$weather_location\?0TmQ" > ~/.tmux/weather
 fi
 
 minutes="$(date +'%M')"
@@ -30,7 +32,9 @@ seconds="$(date +'%S')"
 
 # update data every 20 minutes
 if [[ "$(($minutes % 5))" = "0" && "$seconds" -gt "00" && "$seconds" -lt "03" ]]; then
-  curl -s http://wttr.in/Tel%20Aviv\?0TmQ > ~/.tmux/weather
+  weather_location="$(geo -g | head -3 | tail -r | awk 'NR % 2 == 1' | sed 'N;s/\n/, /;')"
+  weather_location="${weather_location// /%20}"
+  curl -s "http://wttr.in/$weather_location\?0TmQ" > ~/.tmux/weather
 fi
 
 weather="$(cat ~/.tmux/weather | grep -o "[0-9]* °C")"
