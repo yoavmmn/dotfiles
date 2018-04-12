@@ -35,10 +35,10 @@ fi
 
 weather="$(cat ~/.tmux/weather | grep -oe ".[[:digit:]] °C")"
 temprature=$(echo "$weather" | grep -o "[0-9]*")
-icon="❆"
+weather_icon="❆"
 hot_point="15"
 
-[ "$temprature" -gt "$hot_point" ] && icon="☀"
+[ "$temprature" -gt "$hot_point" ] && weather_icon="☀"
 
 tm_segment "$weather_icon" "white" "$weather"
 tm_divider
