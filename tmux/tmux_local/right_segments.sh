@@ -60,7 +60,7 @@ if [[ $(command -v pmset) ]]; then
 fi
 
 # Date and time
-tm_segment "" "colour245" "$(date +'%d %b %Y %H:%M:%S')"
+tm_segment "" "colour245" "$(date +'%B %d, %H:%M')"
 tm_divider
 
 # Machine name
