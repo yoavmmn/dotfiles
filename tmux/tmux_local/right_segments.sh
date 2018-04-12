@@ -43,6 +43,7 @@ _load_weather() {
 weather_segment() {
   local -r TMP_WEATHER_FILE="$HOME/.tmux/weather.tmp"
   local -r HOT_POINT="17"
+  local -r hours="$(date +'%H')"
   local -r minutes="$(date +'%M')"
   local -r seconds="$(date +'%S')"
 
@@ -65,6 +66,11 @@ weather_segment() {
     weather_icon="#[bold]☀"
     weather_color="yellow"
   fi
+
+  if [[ "$hours" -ge "20" || "$hours" -le "05" ]]; then
+    weather_icon="☾"
+    weather_color="white"
+  fi  
 
   tm_segment "$weather_icon" "$weather_color" "$weather"
   tm_divider
