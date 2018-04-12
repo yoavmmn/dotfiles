@@ -33,7 +33,7 @@ if [[ "$(($minutes % 20))" = "0" && "$seconds" -gt "00" && "$seconds" -lt "03" ]
   curl -s http://wttr.in/Tel%20Aviv\?0TmQ > ~/.tmux/weather
 fi
 
-weather="$(cat ~/.tmux/weather | grep -oe ".[[:digit:]] °C")"
+weather="$(cat ~/.tmux/weather | grep -o "[0-9]* °C")"
 temprature=$(echo "$weather" | grep -o "[0-9]*")
 hot_point="17"
 weather_icon="❆"
