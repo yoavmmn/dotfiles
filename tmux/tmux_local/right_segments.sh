@@ -29,7 +29,7 @@ minutes="$(date +'%M')"
 seconds="$(date +'%S')"
 
 # update data every 20 minutes
-if [[ "$(($minutes % 20))" = "0" && "$seconds" -gt "00" && "$seconds" -lt "03" ]]; then
+if [[ "$(($minutes % 5))" = "0" && "$seconds" -gt "00" && "$seconds" -lt "03" ]]; then
   curl -s http://wttr.in/Tel%20Aviv\?0TmQ > ~/.tmux/weather
 fi
 
@@ -40,7 +40,7 @@ weather_icon="❆"
 weather_color="blue"
 
 if [ "$temprature" -gt "$hot_point" ]; then
-  weather_icon="☀"
+  weather_icon="#[size=20]☀"
   weather_color="yellow"
 fi
 
