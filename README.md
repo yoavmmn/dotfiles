@@ -8,8 +8,8 @@ My dotfiles for Linux and macOS.
 - ZSH prompt
 - macOS tweaks
 - Apps and fonts for macOS
-- My zsh configuration
-- My tmux configuration
+- My `zsh` configuration
+- My `tmux` configuration
 - My AppleScripts(automagically compiling them)
 
 ## What's going to be here?
@@ -24,3 +24,6 @@ chmod +x ./install.sh
 # I recommend to run under sudo permissions
 sudo ./install.sh
 ```
+
+## Update script
+Currently only updates `zsh` and `tmux` configurations
