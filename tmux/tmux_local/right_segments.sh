@@ -54,7 +54,7 @@ weather_segment() {
   local epoch; epoch="$(tail -n 1 "$TMP_WEATHER_FILE")"
   local delta; delta=$(( EPOCHSECONDS - epoch ))
 
-  # update data every 20 minutes
+  # update data every 5 minutes
   if [[ $delta -gt $REFRESH_RATE ]]; then
     _load_weather
   fi
