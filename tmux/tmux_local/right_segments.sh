@@ -35,6 +35,7 @@ _load_weather() {
 
   if [ $? -eq 0 ]; then
     curl -s "http://wttr.in/$weather_location\?0TmQ" > "$TMP_WEATHER_FILE"
+    echo "$EPOCHSECONDS" >> "$TMP_WEATHER_FILE"
   fi
 }
 
@@ -43,17 +44,18 @@ _load_weather() {
 weather_segment() {
   local -r TMP_WEATHER_FILE="$HOME/.tmux/weather.tmp"
   local -r HOT_POINT="17"
+  local -r REFRESH_RATE=$(( 5 * 60 ))
   local -r hours="$(date +'%H')"
-  local -r minutes="$(date +'%M')"
-  local -r seconds="$(date +'%S')"
 
   if [ ! -f "$TMP_WEATHER_FILE" ]; then
     _load_weather
   fi
 
+  local epoch; epoch="$(tail -n 1 "$TMP_WEATHER_FILE")"
+  local delta; delta=$(( EPOCHSECONDS - epoch ))
 
   # update data every 20 minutes
-  if [[ "$(($minutes % 5))" = "0" && "$seconds" -gt "00" && "$seconds" -lt "03" ]]; then
+  if [[ $delta -gt $REFRESH_RATE ]]; then
     _load_weather
   fi
 
