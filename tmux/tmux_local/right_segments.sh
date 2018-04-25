@@ -35,7 +35,7 @@ _load_weather() {
 
   if [ $? -eq 0 ]; then
     curl -s "http://wttr.in/$weather_location\?0TmQ" > "$TMP_WEATHER_FILE"
-    echo "$EPOCHSECONDS" >> "$TMP_WEATHER_FILE"
+    echo "$(date +'%s')" >> "$TMP_WEATHER_FILE"
   fi
 }
 
@@ -50,8 +50,9 @@ weather_segment() {
   [[ -f "$TMP_WEATHER_FILE" ]] \
     || _load_weather
 
+  local now; now="$(date +'%s')"
   local epoch; epoch="$(tail -n 1 "$TMP_WEATHER_FILE")"
-  local delta; delta="$(( EPOCHSECONDS - epoch ))"
+  local delta; delta="$(( now - epoch ))"
 
   # update data every 5 minutes
   [[ $delta -gt $REFRESH_RATE ]] \
