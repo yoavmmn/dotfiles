@@ -18,7 +18,6 @@ antigen bundles <<EOBUNDLES
   chrissicool/zsh-256color
   denysdovhan/gitio-zsh
   command-not-found
-  zsh/datetime
   extract
   catimg
   heroku
