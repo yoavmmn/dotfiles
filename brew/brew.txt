@@ -7,8 +7,10 @@ httpie
 heroku
 docker
 python
+awscli
 openssl
 mitmproxy
 wifi-password
 zsh-completions
 jakewmeyer/Geo/geo
+aws-elasticbeanstalk

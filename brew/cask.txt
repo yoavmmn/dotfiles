@@ -15,6 +15,7 @@ unified-remote
 google-chrome
 keepingyouawake
 android-file-transfer
+android-platform-tools
 font-hack
 font-input
 font-source-code-pro
