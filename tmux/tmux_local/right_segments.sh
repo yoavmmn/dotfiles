@@ -71,7 +71,7 @@ weather_segment() {
   if [[ "$hours" -ge "20" || "$hours" -le "05" ]]; then
     weather_icon="☾"
     weather_color="white"
-  fi  
+  fi
 
   tm_segment "$weather_icon" "$weather_color" "$weather"
   tm_divider
