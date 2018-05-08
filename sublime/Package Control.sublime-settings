@@ -17,9 +17,6 @@
 		"GitGutter",
 		"Gitignored File Excluder",
 		"JavaScriptNext - ES6 Syntax",
-		"Markdown Preview",
-		"MarkdownEditing",
-		"NodeRequirer",
 		"Package Control",
 		"Predawn",
 		"Pug",
@@ -28,9 +25,9 @@
 		"SideBarEnhancements",
 		"SublimeCodeIntel",
 		"SublimeLinter",
-		"SublimeLinter-contrib-eslint",
-		"SublimeLinter-contrib-tslint",
-		"TypeScript"
+		"SublimeLinter-eslint",
+		"SublimeLinter-tslint",
+		"TypeScript",
 		"Vue Syntax Highlight"
 	]
 }
