@@ -68,5 +68,8 @@ if [ -f '/usr/local/bin/aws_zsh_completer.sh' ]
     source "/usr/local/bin/aws_zsh_completer.sh"
 fi
 
+# thefuck cli alias
+eval $(thefuck --alias)
+
 # Clear shell after startup
 clear
