@@ -1,8 +1,4 @@
-tell application "Safari" to activate
-
-tell application "System Events"
-  tell process "Safari"
-    keystroke "netflix.com"
-    keystroke return
-  end tell
+tell application "Safari"
+  open location "https://www.netflix.com"
+  activate
 end tell
