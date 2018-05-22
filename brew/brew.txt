@@ -1,5 +1,6 @@
 git
 zsh
+gibo
 node
 tmux
 wget
