@@ -8,9 +8,12 @@ tell application "Safari"
     delay 1
   end repeat
   
+  -- read profile name from file
+  set profileName to (do shell script "cat ~/.netflix_profile")
+
   -- click on my profile if profiles screen was opened
   do JavaScript "document.querySelectorAll('.profile-name').forEach(name => {
-    if (name.textContent === 'Yoav') {
+    if (name.textContent === '" & profileName & "') {
       name.parentElement.click();
     }
   });" in current tab of window 1
