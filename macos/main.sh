@@ -19,7 +19,14 @@ macos_magics() {
 
   for script in ${scripts[@]}; do
     filename="${script%.*}"
-    echo $filename
+    echo "[*] Compiling $filename AppleScript..."
+
+    if [[ $filename = "netflix" ]]; then
+      read -p " - [*] What's your Netflix profile name? " profile
+
+      echo $profile > "$HOME/.netflix_profile"
+    fi
+
     osacompile -o "$filename.app" "$path/$filename.applescript"
   done
 }
