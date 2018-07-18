@@ -4,7 +4,6 @@ jest
 yarn
 hotel
 mocha
-ipify
 rimraf
 ipify-cli
 artillery
