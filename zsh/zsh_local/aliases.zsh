@@ -15,3 +15,9 @@ alias גב="cd" # When in hebrew mode, cd still works
 alias בךקשר="clear" # When in hebrew mode, clear still works
 alias ginit="git init && git add . && git commit -m \"🚀  Initial Commit\"" # Initialize an empty repository, add all of the files and commit them
 alias easypush="git pull --rebase && npm version patch && git push && npm publish"
+
+# craete a directory and cd to it
+mkcdir ()
+{
+  mkdir -p -- "$1" && cd -P -- "$1"
+}
