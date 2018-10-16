@@ -2,7 +2,6 @@ vlc
 iterm2
 enpass
 spotify
-robo-3t
 whatsapp
 spectacle
 cheatsheet
@@ -14,6 +13,7 @@ sublime-text
 unified-remote
 google-chrome
 keepingyouawake
+mongodb-compass
 android-file-transfer
 android-platform-tools
 font-hack
