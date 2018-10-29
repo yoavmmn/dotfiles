@@ -5,6 +5,7 @@ spotify
 whatsapp
 spectacle
 cheatsheet
+teamviewer
 tunnelblick
 appcleaner
 transmission
