@@ -1,7 +1,9 @@
 vlc
+steam
 iterm2
 enpass
 spotify
+purevpn
 whatsapp
 spectacle
 cheatsheet
