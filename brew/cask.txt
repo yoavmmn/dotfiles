@@ -6,6 +6,7 @@ spotify
 purevpn
 whatsapp
 spectacle
+sequel-pro
 cheatsheet
 teamviewer
 tunnelblick
