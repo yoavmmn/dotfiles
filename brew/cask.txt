@@ -4,6 +4,7 @@ iterm2
 enpass
 spotify
 purevpn
+postman
 whatsapp
 spectacle
 sequel-pro
