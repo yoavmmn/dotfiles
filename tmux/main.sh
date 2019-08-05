@@ -1,4 +1,4 @@
-install_zsh() {
+install_tmux() {
   if [ $1 == "RedHat" ]; then
     dnf install -y tmux &> /dev/null &
   elif [ $1 == "Debian" ]; then
