@@ -58,7 +58,7 @@ weather_segment() {
   [[ $delta -gt $REFRESH_RATE ]] \
     && _load_weather
 
-  local weather="$(cat "$TMP_WEATHER_FILE" | grep -o "[0-9]* °C")"
+  local weather="$(cat "$TMP_WEATHER_FILE" | grep -oE "([0-9]*\.\.)?([0-9]*) °C" | sed -e "s/\./-/1" -e "s/\.//g")"
   local temprature=$(echo "$weather" | grep -o "[0-9]*")
   local weather_icon="❆"
   local weather_color="blue"
