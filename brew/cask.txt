@@ -1,4 +1,5 @@
 vlc
+slack
 notion
 steam
 iterm2
