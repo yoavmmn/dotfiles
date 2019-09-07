@@ -61,6 +61,28 @@ weather_segment() {
   tm_divider
 }
 
+# Music
+music_segment() {
+  [[ $(command -v osascript) ]] \
+    || return 1
+
+  spotify="$(osascript "$HOME"/.tmux/applescripts/spotify.scpt)"
+  is_playing="$(osascript "$HOME"/.tmux/applescripts/spotify_is_playing.scpt)"
+
+  [[ "$is_playing" == 1 ]] && \
+    music_color="#25d34e" || \
+    music_color=""
+
+  # Truncate the result
+  [[ ${#spotify} -gt 25 ]] && \
+    spotify="$(echo "$spotify" | cut -c 1-25)..."
+
+  if [[ -n "$spotify" ]]; then
+    tm_segment "" "$music_color" "${spotify}"
+    tm_divider
+  fi
+}
+
 # Bettery status
 battery_segment() {
   if [[ $(command -v pmset) ]]; then
@@ -86,6 +108,7 @@ host_segment() {
   tm_segment "" "blue" "#h"
 }
 
+music_segment
 weather_segment
 battery_segment
 date_segment
