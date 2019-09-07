@@ -16,6 +16,7 @@ appcleaner
 transmission
 beardedspice
 sublime-text
+corelocationcli
 unified-remote
 google-chrome
 keepingyouawake
