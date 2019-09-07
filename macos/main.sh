@@ -13,6 +13,9 @@ macos_magics() {
   # changes hidden apps icon transparency
   defaults write com.apple.Dock showhidden -bool true
 
+  # Disable 'Are you sure you want to open this application?' dialog
+  defaults write com.apple.LaunchServices LSQuarantine -bool false
+
   # compile applescripts
   path="./macos/applescripts"
   scripts=$(ls $path)
