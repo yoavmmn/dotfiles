@@ -21,20 +21,16 @@ tm_divider() {
 }
 
 _load_weather() {
-  # geo -g - get geolocation data
-  # head -3 - get only the first 3 lines
-  # tail -r - reverse lines order
-  # awk 'NR % 2 == 1' - keep only the first and third lines(city and country) the second line is region, not necessary
-  # sed 'N;s/\n/, /;' - remove new-lines and concating to a string like "Tel Aviv, Israel"
+  # corelocationcli - get geolocation data
   # weather_location// /%20 - replacing spaces to url encoded spaces
-  weather_location="$(geo -g | head -3 | tail -r | awk 'NR % 2 == 1' | sed 'N;s/\n/, /;')"
+  weather_location="$(corelocationcli)"
   weather_location="${weather_location// /%20}"
 
   # check for internet connection
   wget -q --spider http://google.com
 
   if [ $? -eq 0 ]; then
-    curl -s "http://wttr.in/$weather_location\?0TmQ" > "$TMP_WEATHER_FILE"
+    curl -s "http://wttr.in/$weather_location?format=1" > "$TMP_WEATHER_FILE"
     echo "$(date +'%s')" >> "$TMP_WEATHER_FILE"
   fi
 }
@@ -58,22 +54,9 @@ weather_segment() {
   [[ $delta -gt $REFRESH_RATE ]] \
     && _load_weather
 
-  local weather="$(cat "$TMP_WEATHER_FILE" | grep -oE "([0-9]*\.\.)?([0-9]*) °C" | sed -e "s/\./-/1" -e "s/\.//g")"
-  local temprature=$(echo "$weather" | grep -o "[0-9]*")
-  local weather_icon="❆"
-  local weather_color="blue"
+  local weather="$(head -n 1 "$TMP_WEATHER_FILE")"
 
-  if [ "$temprature" -gt "$HOT_POINT" ]; then
-    weather_icon="#[bold]☀"
-    weather_color="yellow"
-  fi
-
-  if [[ "$hours" -ge "20" || "$hours" -le "05" ]]; then
-    weather_icon="☾"
-    weather_color="white"
-  fi
-
-  tm_segment "$weather_icon" "$weather_color" "$weather"
+  tm_segment "" "" "$weather"
   tm_divider
 }
 
