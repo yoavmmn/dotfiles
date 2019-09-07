@@ -55,6 +55,7 @@ weather_segment() {
     && _load_weather
 
   local weather="$(head -n 1 "$TMP_WEATHER_FILE")"
+  weather="$(echo "${weather//+}")" 
 
   tm_segment "" "" "$weather"
   tm_divider
