@@ -22,7 +22,6 @@ antigen bundles <<EOBUNDLES
   catimg
   heroku
   node
-  nyan
   git
   osx
 EOBUNDLES
