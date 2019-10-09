@@ -40,7 +40,7 @@ _load_weather() {
 weather_segment() {
   local -r TMP_WEATHER_FILE="$HOME/.tmux/weather.tmp"
   local -r HOT_POINT="17"
-  local -r REFRESH_RATE=$(( 5 * 60 ))
+  local -r REFRESH_RATE=$(( 60 * 60 )) // 60 minutes
   local -r hours="$(date +'%H')"
 
   [[ -f "$TMP_WEATHER_FILE" ]] \
@@ -50,7 +50,7 @@ weather_segment() {
   local epoch; epoch="$(tail -n 1 "$TMP_WEATHER_FILE")"
   local delta; delta="$(( now - epoch ))"
 
-  # update data every 5 minutes
+  # check if it's time to update the data
   [[ $delta -gt $REFRESH_RATE ]] \
     && _load_weather
 
