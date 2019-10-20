@@ -19,7 +19,6 @@ sublime-text
 corelocationcli
 unified-remote
 google-chrome
-keepingyouawake
 mongodb-compass
 android-file-transfer
 android-platform-tools
