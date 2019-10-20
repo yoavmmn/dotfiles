@@ -8,7 +8,7 @@ spotify
 purevpn
 postman
 whatsapp
-spectacle
+rectangle
 sequel-pro
 cheatsheet
 teamviewer
