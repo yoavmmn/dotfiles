@@ -24,7 +24,6 @@ rectangle
 sequel-pro
 slack
 spotify
-steam
 sublime-text
 teamviewer
 transmission
