@@ -2,7 +2,6 @@ go
 git
 zsh
 gibo
-hugo
 node
 tmux
 wget
