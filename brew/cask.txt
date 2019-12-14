@@ -16,6 +16,7 @@ font-open-sans-condensed
 font-open-sans-hebrew-condensed
 font-source-code-pro
 iterm2
+macs-fan-control
 mongodb-compass
 notion
 postman
