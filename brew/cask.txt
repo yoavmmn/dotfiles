@@ -15,6 +15,7 @@ font-open-sans-hebrew
 font-open-sans-condensed
 font-open-sans-hebrew-condensed
 font-source-code-pro
+horndis
 iterm2
 macs-fan-control
 mongodb-compass
@@ -26,7 +27,6 @@ sequel-pro
 slack
 spotify
 sublime-text
-teamviewer
 transmission
 unified-remote
 vlc
