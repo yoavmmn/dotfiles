@@ -24,6 +24,7 @@ postman
 purevpn
 rectangle
 sequel-pro
+signal
 slack
 spotify
 sublime-text
