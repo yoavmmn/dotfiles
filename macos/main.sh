@@ -30,6 +30,12 @@ macos_magics() {
       echo $profile > "$HOME/.netflix_profile"
     fi
 
+    if [[ $filename = "toggle-headphones" ]]; then
+      read -p " - [*] What's your headphones name (see Bluetooth menu)? " headphones
+
+      echo $headphones > "$HOME/.headphones_name"
+    fi
+
     osacompile -o "$filename.app" "$path/$filename.applescript"
   done
 }
