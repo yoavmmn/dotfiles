@@ -16,6 +16,17 @@ macos_magics() {
   # Disable 'Are you sure you want to open this application?' dialog
   defaults write com.apple.LaunchServices LSQuarantine -bool false
 
+  # Better Bluetooth audio
+  read -p " - [*] Enable AptX codec [true/false]? " enableAptX
+
+  defaults write bluetoothaudiod "Enable AptX codec" -bool $enableAptX
+  defaults write bluetoothaudiod "Disable AAC codec" -bool $enableAptX
+
+  if [[ $enableAptX = "false" ]]; then
+    read -p " - [*] Enable AAC codec [true/false]? " enableAAC
+    defaults write bluetoothaudiod "Enable AAC codec" -bool $enableAAC
+  fi
+
   # compile applescripts
   path="./macos/applescripts"
   scripts=$(ls $path)
