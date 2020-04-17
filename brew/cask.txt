@@ -1,7 +1,5 @@
 android-platform-tools
 appcleaner
-beardedspice
-cheatsheet
 chromium
 corelocationcli
 enpass
