@@ -1,7 +1,6 @@
 n
 pm2
 jest
-yarn
 hotel
 mocha
 rimraf
