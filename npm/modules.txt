@@ -5,7 +5,6 @@ yarn
 hotel
 mocha
 rimraf
-ipify-cli
 artillery
 typescript
 speed-test
