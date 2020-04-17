@@ -8,7 +8,6 @@ rimraf
 ipify-cli
 artillery
 typescript
-browserify
 speed-test
 webpack
 webpack-dev-server
