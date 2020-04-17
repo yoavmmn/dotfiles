@@ -32,6 +32,11 @@ install_cask_pkgs() {
 
   for pkg in ${cask_pkgs_list[@]}; do
     install_cask_pkg $pkg
+
+    if [[ $pkg = "horndis" ]]; then
+      echo "   [*] Loading HoRNDIS kext"
+      kextload /Library/Extensions/HoRNDIS.kext
+    fi
   done
 }
 
