@@ -17,8 +17,8 @@ install() {
 
   git_magics
   sublime_magics
-  npm_magics
   brew_magics
+  npm_magics
   macos_magics
   zsh_magics
   tmux_magics

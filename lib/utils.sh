@@ -1,7 +1,7 @@
 # some of the functions has been taken from https://github.com/yardnsm/dotfiles
 
 not_sudo() {
-	echo "[!] I need sudo access to continue."
+	echo "[!] I need sudo permissions to continue."
 	exit 1
 }
 
