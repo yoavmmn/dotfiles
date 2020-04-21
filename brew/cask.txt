@@ -28,5 +28,6 @@ spotify
 sublime-text
 transmission
 unified-remote
+virtualbox
 vlc
 whatsapp
