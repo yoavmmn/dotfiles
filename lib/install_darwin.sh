@@ -6,6 +6,7 @@ source "./brew/main.sh"
 source "./macos/main.sh"
 source "./zsh/main.sh"
 source "./tmux/main.sh"
+source "./finicky/main.sh"
 
 install() {
   echo "[*] Installig for macOS..."
@@ -22,4 +23,5 @@ install() {
   macos_magics
   zsh_magics
   tmux_magics
+  finicky_magics
 }

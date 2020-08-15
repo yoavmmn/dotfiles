@@ -3,6 +3,7 @@ appcleaner
 chromium
 corelocationcli
 enpass
+finicky
 firefox
 font-fira-code
 font-firacode-nerd-font-mono
@@ -17,6 +18,7 @@ horndis
 iterm2
 macs-fan-control
 mongodb-compass
+nextdns/tap/nextdns
 notion
 postman
 purevpn
@@ -26,8 +28,10 @@ signal
 slack
 spotify
 sublime-text
+tableplus
 transmission
 unified-remote
 virtualbox
+visual-studio-code
 vlc
 whatsapp
