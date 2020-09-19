@@ -16,6 +16,7 @@ font-open-sans-hebrew-condensed
 font-source-code-pro
 horndis
 iterm2
+kindle
 macs-fan-control
 mongodb-compass
 nextdns/tap/nextdns
