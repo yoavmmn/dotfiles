@@ -40,12 +40,6 @@ antigen apply
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
-# key bindings
-bindkey "^[f" forward-word
-bindkey "^[b" backward-word
-bindkey "^E" end-of-line
-bindkey "^A" beginning-of-line
-
 # zsh configuration
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -79,3 +73,9 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:/usr/local/sbin
+
+# key bindings
+bindkey "^[f" forward-word
+bindkey "^[b" backward-word
+bindkey "^[[C" end-of-line
+bindkey "^[[D" beginning-of-line
