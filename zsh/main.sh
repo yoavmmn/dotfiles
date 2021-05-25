@@ -36,6 +36,20 @@ base16() {
   fi
 }
 
+autocomplete() {
+  if [ -d "$HOME/.zsh/zsh-autocomplete" ]; then
+    echo "[!] zsh-autocomplete is already installed."
+  else
+    git clone --depth 1 -- "https://github.com/marlonrichert/zsh-autocomplete.git" "$HOME/.zsh/zsh-autocomplete" &> /dev/null &
+
+    echo "[*] Installing zsh-autocomplete..."
+
+    [ $? -eq 0 ] \
+      && echo "[*] Installed zsh-autocomplete. moving on..." \
+      || echo "[!] Couldn't install zsh-autocomplete."
+  fi
+}
+
 setup_zsh() {
   echo "[*] Setting up zsh config and theme."
 
@@ -52,6 +66,7 @@ zsh_magics() {
 
   antigen
   base16
+  autocomplete
 
   setup_zsh
 }

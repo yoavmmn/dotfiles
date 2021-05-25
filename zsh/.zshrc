@@ -1,7 +1,3 @@
-###
-# @jonathano Thanks for the awesome config
-###
-
 setopt prompt_subst
 autoload -U promptinit && promptinit
 autoload -U colors && colors
@@ -33,6 +29,9 @@ for file in ~/.zsh_local/*.zsh; do
   fi
 done
 
+# import zsh-autocomplete
+source $HOME/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
 antigen bundle yardnsm/blox-zsh-theme
 
 antigen apply
@@ -40,13 +39,19 @@ antigen apply
 # Base16 Colors
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-base16_bright
+
+# key bindings
+bindkey "^[f" forward-word
+bindkey "^[b" backward-word
+bindkey "^E" end-of-line
+bindkey "^A" beginning-of-line
 
 # zsh configuration
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=1000
 bindkey -v
+zstyle ':autocomplete:*' min-input 2
 zstyle :compinstall filename '/Users/yoavmmn/.zshrc'
 
 setopt autocd extendedglob
@@ -67,9 +72,6 @@ if [ -f '/usr/local/bin/aws_zsh_completer.sh' ]
     source "/usr/local/bin/aws_zsh_completer.sh"
 fi
 
-# thefuck cli alias
-eval $(thefuck --alias)
-
 # Android studio and Ract Native
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
@@ -77,6 +79,3 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:/usr/local/sbin
-
-# Clear shell after startup
-clear
