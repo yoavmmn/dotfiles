@@ -77,5 +77,5 @@ export PATH=$PATH:/usr/local/sbin
 # key bindings
 bindkey "^[f" forward-word
 bindkey "^[b" backward-word
-bindkey "^[[C" end-of-line
-bindkey "^[[D" beginning-of-line
+bindkey "^[end" end-of-line
+bindkey "^[begin" beginning-of-line
